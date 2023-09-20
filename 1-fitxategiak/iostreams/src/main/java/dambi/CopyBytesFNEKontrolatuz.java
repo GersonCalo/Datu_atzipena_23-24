@@ -1,6 +1,7 @@
 package dambi;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -20,9 +21,9 @@ public class CopyBytesFNEKontrolatuz {
             while ((c = in.read()) != -1) {
                 out.write(c);
             }
-        } catch (TypeException ex) {
+        } catch ( FileNotFoundException ex) {
 
-            // Instrucciones cuando se produce una excepcion
+            System.out.println("fitxategia ez da aurkitu.");
         
         } finally {
             if (in != null) {
